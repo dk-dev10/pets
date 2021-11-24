@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+}
+
+.container {
+  width: 90%;
+  margin: 1% auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pet {
+  width: 24%;
+  margin-bottom: 25px;
+  text-decoration: none;
+}
+
+.pet h1 {
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 24px;
+}
+
+.picture {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
+}
+
+.picture img {
+  min-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: all 0.2s;
+}
+
+.pet:hover img {
+  transform: translate(-50%, -50%) scale(1.2);
+}
